@@ -1,0 +1,95 @@
+ /* .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); } */
+
+@font-face {
+    font-family: Roboto;
+    src:url('/assets/fonts/Roboto-Regular.ttf');
+}
+
+:root {
+    --red: hsl(4, 100%, 67%);
+    --dark-blue:hsl(234, 29%, 20%);
+    --darker-blue:hsl(235, 18%, 26%);
+    --grey:hsl(0, 0%,58%);
+    --white:hsl(0, 0%, 100%);
+}
+
+* {
+    font-family: 'Roboto',sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin:0;
+  background-color:var(--light-grayish-blue);
+  color:var(--very-dark-grayish-blue);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+  font-style: italic;
+  background-repeat:no-repeat;
+  background-size: cover;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: peru;
+    min-block-size: 100vh;
+  
+}
+
+.card    {
+    background-color: firebrick;
+    inline-size: 20.4375rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-header::before {
+   content:'Here is before';
+   position: absolute;
+   background-size: cover;
+
+    /* background-image: url("./assets/images/illustration-sign-up-mobile.svg"); */
+}
+
+.card-header {
+    flex-basis: 12.5rem;
+    position: relative;
+    background-color: skyblue;
+    border-radius:  0 0 15px 15px;
+}
+
+.card-body{
+    padding:15px;
+}
+
+.intro {
+    background-color: greenyellow;
+}
+
+.card-list {
+    background-color:var(--dark-blue);
+}
+
+li {
+    list-style-image: url('./assets/images/icon-list.svg');
+}
