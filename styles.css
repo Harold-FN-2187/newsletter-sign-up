@@ -1,5 +1,10 @@
- /* .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); } */
+ .attribution { 
+    font-size: 11px;
+     text-align: center; }
+
+    .attribution a { 
+        color: hsl(228, 45%, 44%);
+     }
 
 @font-face {
     font-family: Roboto;
@@ -19,7 +24,7 @@
 }
 
 html {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   font-size: 100%;
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
@@ -72,7 +77,7 @@ img {
 }
 
 .card-header {
-    flex-basis: 12.5rem;
+    flex-basis: 10rem;
     position: relative;
     background-color: skyblue;
     border-radius:  0 0 15px 15px;
@@ -86,10 +91,74 @@ img {
     background-color: greenyellow;
 }
 
-.card-list {
-    background-color:var(--dark-blue);
+
+
+ul {
+    padding:0;
+    margin: 0;
+    list-style: none;
 }
 
-li {
-    list-style-image: url('./assets/images/icon-list.svg');
+ul > li {
+    background-image: url('./assets/images/icon-list.svg');
+    background-repeat: no-repeat;
+    background-position: 0 5px;
+    background-size: 16px 16px;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    font-size: 16px;
+}
+
+li:last-child {
+    margin-bottom: 0;
+}
+
+.sub-section {
+    background-color: plum  ;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+label {
+    font-weight: 700;
+    font-size:10px;
+
+}
+
+input {
+    text-align: center;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    line-height: 30px;
+    border: 1px solid green;
+    padding-left: 5px;
+}
+
+::placeholder {
+    color:peru;
+    padding-left: inherit;
+}
+
+/* Add pseudoclass focus for input and button */
+
+/* include tabindex? transition animation */
+
+button {
+    background-color:var(--dark-blue);
+    line-height: 30px;
+    color:var(--white);
+    font-weight: 700;
+    border: 1px solid var(--dark-blue);
+    border-radius: 5px;
+}
+
+.success-mobile {
+    background-color: crimson;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    inline-size: 20.4375rem;
 }
