@@ -68,19 +68,21 @@ img {
     overflow: hidden;
 }
 
-.card-header::before {
-   content:'Here is before';
+/* .card-header::before {
    position: absolute;
    background-size: cover;
-
-    /* background-image: url("./assets/images/illustration-sign-up-mobile.svg"); */
-}
+   content:''
+} */
 
 .card-header {
-    flex-basis: 10rem;
+    flex-basis: 14rem;
     position: relative;
     background-color: skyblue;
+    background-image: url('/assets/images/illustration-sign-up-mobile.svg');
+    background-repeat: no-repeat;
+    background-size:100%;
     border-radius:  0 0 15px 15px;
+    background-position: 0% 0%;
 }
 
 .card-body{
@@ -154,11 +156,84 @@ button {
     border-radius: 5px;
 }
 
-.success-mobile {
+/* .success-mobile {
     background-color: crimson;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     inline-size: 20.4375rem;
-}
+} */
+
+/* Mobile Modal Styling */
+
+
+ .modal {
+        display: none; 
+        position: fixed; 
+        z-index: 1; 
+        padding-top: 100px;
+        padding-bottom: 20px;
+        left: 0;
+        top: 0;
+        height: 100%;
+        overflow: auto; 
+        background-color: rgb(0, 0, 0); 
+        background-color:rgba(0,0,0,0.4);
+        
+        /* Black w/ opacity */
+      }
+
+      /* Modal Content */
+      .modal-header {
+        /* background-color: rebeccapurple; */
+        content: '';
+        background-image: url('/assets/images/icon-success.svg');
+        background-position: 0 90%;
+        background-repeat: no-repeat;
+        flex-basis: 8rem;
+        
+      }
+
+      .modal-content {
+        display: flex;
+        flex-direction: column;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 45px;
+        border: 1px solid #888;
+        width: 50%;
+        /* height: 90%; */
+      }
+
+      .modal-content h1 {
+        font-weight: 900;
+        color: var(--darker-blue);
+        font-size: 50px;
+        margin-bottom: 0;
+        line-height:1.0;
+      }
+
+      .modal-content p {
+        color:var(--dark-blue);
+      }
+
+      /* The Close Button */
+      .close {
+        color:var(--white);
+        float: right;
+        font-size: 20px;
+        font-weight: 500;
+        background-color: var(--dark-blue);
+        border-radius: 5px;
+        position: relative;
+        /* Set padding and margin to first button */
+        /* Adjust positioning of button top left right bottom */
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
