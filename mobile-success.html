@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subscription Confirmed</title>
+    <style>
+      :root {
+        --red: hsl(4, 100%, 67%);
+        --dark-blue: hsl(234, 29%, 20%);
+        --darker-blue: hsl(235, 18%, 26%);
+        --grey: hsl(0, 0%, 58%);
+        --white: hsl(0, 0%, 100%);
+      }
+
+      @font-face {
+        font-family: Roboto-Regular;
+        src: url("/assets/fonts/Roboto-Regular.ttf");
+        font-family: Roboto-Bold;
+        src: url("/assets/fonts/Roboto-Bold.ttf");
+      }
+
+      body {
+        margin: 0;
+        background-color: aquamarine;
+        font-family: "Roboto";
+        line-height: 2;
+      }
+
+      h1 {
+        margin: 0px 0px 10px 0;
+        color: var(--darker-blue);
+        font-size: 48px;
+        line-height: 1;
+      }
+
+      p {
+        background-color: var(--white);
+        line-height: 1.5;
+        color: var(--dark-blue);
+        font-size: 20px;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-block-size: 100vh;
+        background-color: white;
+      }
+
+      .card {
+        inline-size: 22rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card-header {
+        background-color: var(--white);
+        flex-basis: 14rem;
+        background-image: url("/assets/images/icon-success.svg");
+        background-repeat: no-repeat;
+        background-position: 15px 90%;
+      }
+
+      .card-body {
+        padding: 15px;
+        background-color: var(--white);
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      button {
+        background-color: hsl(234, 29%, 20%);
+        color: white;
+        font-weight: 400;
+        font-size: 16px;
+        margin: 10px;
+        padding: 12px;
+        font-weight: bold;
+        border-radius: 10px;
+        border: 1px solid beige;
+        margin-top: 15rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <div class="card">
+        <div class="card-header"></div>
+        <div class="card-body">
+          <h1>Thanks for subscribing!</h1>
+          <p>
+            A confirmation email has been sent to
+            <strong>ash@loremcompany.com</strong>.Please open it and click on
+            the button inside to confirm your subscription.
+          </p>
+          <button class="mobile-back" id="mobile-back" onclick="goToPage1()">
+            Dismiss Message
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script>
+    function goToPage1() {
+      window.location.href = "index.html";
+    }
+  </script>
+</html>

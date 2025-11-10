@@ -1,16 +1,3 @@
- .attribution { 
-    font-size: 11px;
-     text-align: center; }
-
-    .attribution a { 
-        color: hsl(228, 45%, 44%);
-     }
-
-@font-face {
-    font-family: Roboto;
-    src:url('/assets/fonts/Roboto-Regular.ttf');
-}
-
 :root {
     --red: hsl(4, 100%, 67%);
     --dark-blue:hsl(234, 29%, 20%);
@@ -19,221 +6,183 @@
     --white:hsl(0, 0%, 100%);
 }
 
+
 * {
-    font-family: 'Roboto',sans-serif;
+  font-family: sans-serif;
+  box-sizing: border-box;
 }
 
-html {
-  /* box-sizing: border-box; */
-  font-size: 100%;
-  text-rendering: optimizelegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
+
 
 body {
   margin:0;
-  background-color:var(--light-grayish-blue);
-  color:var(--very-dark-grayish-blue);
   font-weight: 400;
   line-height: 1.4;
+  background-color: var(--darker-blue);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-img {
-  max-inline-size: 100%;
-  block-size: auto;
-  font-style: italic;
-  background-repeat:no-repeat;
-  background-size: cover;
-}
 
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: peru;
-    min-block-size: 100vh;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0;
 }
 
-.card    {
-    background-color: firebrick;
-    inline-size: 20.4375rem;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    overflow: hidden;
-}
+.card {
+ display: flex;
+ flex-direction: column;
+ background-color: var(--white);
+ width: 100%;
+ border-radius: 0;
+ box-shadow: none;
 
-/* .card-header::before {
-   position: absolute;
-   background-size: cover;
-   content:''
-} */
+}
 
 .card-header {
-    flex-basis: 14rem;
-    position: relative;
-    background-color: skyblue;
-    background-image: url('/assets/images/illustration-sign-up-mobile.svg');
-    background-repeat: no-repeat;
-    background-size:100%;
-    border-radius:  0 0 15px 15px;
-    background-position: 0% 0%;
+ height: 280px;
+ background-image: url('/assets/images/illustration-sign-up-mobile.svg');
+ background-repeat: no-repeat;
+ width: 100%;
+ background-size: cover;
+ background-position: center;
+ border-radius: 0 0 20px 20px;
+
 }
 
-.card-body{
-    padding:15px;
+.card-body {
+  padding: 40px 24px;
 }
 
-.intro {
-    background-color: greenyellow;
+.card-body h1 {
+  font-size: 40px;
+    color:var(--dark-blue);
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 24px;
 }
 
+.card-body p {
+  font-size: 16px;
+    color:var(--dark-blue);
+    margin-bottom: 24px;
+}
 
+.card-list p {
+  font-weight: 400;
+  color: var(--dark-blue);
+
+}
 
 ul {
-    padding:0;
-    margin: 0;
-    list-style: none;
+  padding: 0;
+  list-style: none;
+  color: var(--dark-blue);
 }
 
 ul > li {
-    background-image: url('./assets/images/icon-list.svg');
-    background-repeat: no-repeat;
-    background-position: 0 5px;
-    background-size: 16px 16px;
-    padding-left: 25px;
-    margin-bottom: 12px;
-    line-height: 1.4;
-    font-size: 16px;
+  line-height: 1.5;
+  font-size: 18px;
+  background-image: url('/assets/images/icon-success.svg');
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: 0 5px;
+  padding-left: 25px;
+  margin-bottom: 12px;
 }
 
 li:last-child {
-    margin-bottom: 0;
+  margin-bottom: 16px;
 }
 
-.sub-section {
-    background-color: plum  ;
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
+/* To the Forms */
+
+.form-group {
+  margin-bottom: 20px;
+
 }
 
 label {
-    font-weight: 700;
-    font-size:10px;
+  font-weight: bolder;
+  display: block;
+  margin-bottom: 5px;
+  color: var(--darker-blue);
+  
 
 }
 
-input {
-    text-align: center;
-    border-radius: 4px;
-    margin-bottom: 10px;
-    line-height: 30px;
-    border: 1px solid green;
-    padding-left: 5px;
+input[type="email"]{
+  width: 100%;
+  padding: 10px;
+  line-height: 2.0;
+  border: 1px solid var(--grey);
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
-::placeholder {
-    color:peru;
-    padding-left: inherit;
+.error-message {
+  float: right;
+  font-weight: bold;
+  font-size: 0.9em;
 }
 
-/* Add pseudoclass focus for input and button */
+.invalid-group input[type="email"] {
+  border-color: #dc3545; 
+  background-color: #f8d7da; 
+  color: #721c24; 
+}
 
-/* include tabindex? transition animation */
+.invalid-group .error-message {
+  color: #dc3545; 
+}
 
 button {
-    background-color:var(--dark-blue);
-    line-height: 30px;
-    color:var(--white);
-    font-weight: 700;
-    border: 1px solid var(--dark-blue);
-    border-radius: 5px;
+  border-radius: 8px;
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--dark-blue);
+  color: var(--white);
+  font-weight: 700;
+  width: 100%;
+  font-size: 16px;
 }
 
-/* .success-mobile {
-    background-color: crimson;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    inline-size: 20.4375rem;
-} */
 
-/* Mobile Modal Styling */
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 20px; 
+  }
 
+  .card {
+    flex-direction: row-reverse; 
+    max-width: 928px; 
+    max-height: 640px; 
+    padding: 24px; 
+    border-radius: 36px; 
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.2); 
+  }
 
- .modal {
-        display: none; 
-        position: fixed; 
-        z-index: 1; 
-        padding-top: 100px;
-        padding-bottom: 20px;
-        left: 0;
-        top: 0;
-        height: 100%;
-        overflow: auto; 
-        background-color: rgb(0, 0, 0); 
-        background-color:rgba(0,0,0,0.4);
-        
-        /* Black w/ opacity */
-      }
+  .card-header {
+    flex: 1; 
+    height: auto; 
+    min-height: 580px; 
+    background-image: url('./assets/images/illustration-sign-up-desktop.svg'); 
+    border-radius: 10px;
+  }
 
-      /* Modal Content */
-      .modal-header {
-        /* background-color: rebeccapurple; */
-        content: '';
-        background-image: url('/assets/images/icon-success.svg');
-        background-position: 0 90%;
-        background-repeat: no-repeat;
-        flex-basis: 8rem;
-        
-      }
+  .card-body {
+    flex: 1; 
+    padding: 70px 60px;
+  }
 
-      .modal-content {
-        display: flex;
-        flex-direction: column;
-        background-color: #fefefe;
-        margin: auto;
-        padding: 45px;
-        border: 1px solid #888;
-        width: 50%;
-        /* height: 90%; */
-      }
-
-      .modal-content h1 {
-        font-weight: 900;
-        color: var(--darker-blue);
-        font-size: 50px;
-        margin-bottom: 0;
-        line-height:1.0;
-      }
-
-      .modal-content p {
-        color:var(--dark-blue);
-      }
-
-      /* The Close Button */
-      .close {
-        color:var(--white);
-        float: right;
-        font-size: 20px;
-        font-weight: 500;
-        background-color: var(--dark-blue);
-        border-radius: 5px;
-        position: relative;
-        /* Set padding and margin to first button */
-        /* Adjust positioning of button top left right bottom */
-      }
-
-      .close:hover,
-      .close:focus {
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
-      }
+  .card-body h1 {
+    font-size: 56px; 
+  }  
+     
+}
