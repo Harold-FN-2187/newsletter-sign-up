@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
       event.preventDefault();
     } else {
       event.preventDefault();
-      alert("Form is valid! Ready for submission/redirect.");
+      // alert("Form is valid! Ready for submission/redirect.");
 
       let redirectURL;
       if (mobileQuery.matches) {

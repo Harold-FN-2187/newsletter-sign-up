@@ -26,7 +26,7 @@ body {
 }
 
 
-.container {
+ .container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,12 +39,13 @@ body {
  flex-direction: column;
  background-color: var(--white);
  width: 100%;
+ height: 90%;
  border-radius: 0;
  box-shadow: none;
 
 }
 
-.card-header {
+ .card-header {
  height: 280px;
  background-image: url('/assets/images/illustration-sign-up-mobile.svg');
  background-repeat: no-repeat;
@@ -57,9 +58,9 @@ body {
 
 .card-body {
   padding: 40px 24px;
-}
+} 
 
-.card-body h1 {
+ .card-body h1 {
   font-size: 40px;
     color:var(--dark-blue);
     font-weight: 700;
@@ -100,7 +101,7 @@ li:last-child {
   margin-bottom: 16px;
 }
 
-/* To the Forms */
+
 
 .form-group {
   margin-bottom: 20px;
@@ -151,38 +152,61 @@ button {
   font-weight: 700;
   width: 100%;
   font-size: 16px;
+  cursor: pointer;
+} 
+
+button:hover:not(:disabled) {
+  background: linear-gradient(to right, #ff6a3a, #ff527b); 
+  box-shadow: 0 10px 20px rgba(255, 82, 123, 0.5);
 }
 
 
-@media screen and (min-width: 768px) {
-  .container {
-    padding: 20px; 
+/* Desktop Viewpoint */
+ @media screen and (min-width: 900px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
   }
+
+  .container {
+    padding: 0;
+    min-height: auto;
+  }
+
 
   .card {
-    flex-direction: row-reverse; 
-    max-width: 928px; 
-    max-height: 640px; 
-    padding: 24px; 
-    border-radius: 36px; 
-    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.2); 
+    flex-direction: row-reverse;
+    padding:20px;
+    height:auto;
+    /* width: auto; */
+    max-width: 920px;
+    border-radius: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
   }
 
+
   .card-header {
-    flex: 1; 
-    height: auto; 
-    min-height: 580px; 
-    background-image: url('./assets/images/illustration-sign-up-desktop.svg'); 
+    flex:1;
+    background-image: url('/assets/images/illustration-sign-up-desktop.svg');
+    background-size: cover;
+    background-position: center;
+    min-height: 570px;
     border-radius: 10px;
   }
 
   .card-body {
-    flex: 1; 
-    padding: 70px 60px;
+    flex:1;
   }
 
-  .card-body h1 {
-    font-size: 56px; 
-  }  
-     
+  button {
+    padding: 20px;
+  }
+
+  button:hover:not(:disabled) {
+
+  background: linear-gradient(to right, #ff6a3a, #ff527b); 
+  box-shadow: 0 10px 20px rgba(255, 82, 123, 0.5);
 }
+ }
