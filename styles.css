@@ -46,32 +46,32 @@ body {
 }
 
  .card-header {
- height: 280px;
+ height: 17.5rem;
  background-image: url('/assets/images/illustration-sign-up-mobile.svg');
  background-repeat: no-repeat;
  width: 100%;
  background-size: cover;
  background-position: center;
- border-radius: 0 0 20px 20px;
+ border-radius: 0 0 1.25rem 1.25rem;
 
 }
 
 .card-body {
-  padding: 40px 24px;
+  padding: 2.5rem 1.5rem;
 } 
 
  .card-body h1 {
-  font-size: 40px;
+  font-size: 2.5rem;
     color:var(--dark-blue);
     font-weight: 700;
     margin-top: 0;
-    margin-bottom: 24px;
+    margin-bottom:1.5rem;
 }
 
 .card-body p {
-  font-size: 16px;
+  font-size: 1rem;
     color:var(--dark-blue);
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
 }
 
 .card-list p {
@@ -88,30 +88,30 @@ ul {
 
 ul > li {
   line-height: 1.5;
-  font-size: 18px;
+  font-size: 1.125rem;
   background-image: url('/assets/images/icon-success.svg');
   background-repeat: no-repeat;
-  background-size: 16px 16px;
-  background-position: 0 5px;
-  padding-left: 25px;
-  margin-bottom: 12px;
+  background-size: 1rem 1rem;
+  background-position: 0 0.313rem;
+  padding-left: 1.563rem;
+  margin-bottom: 0.75rem;
 }
 
 li:last-child {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 
 }
 
 label {
   font-weight: bolder;
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 0.313rem;
   color: var(--darker-blue);
   
 
@@ -119,12 +119,12 @@ label {
 
 input[type="email"]{
   width: 100%;
-  padding: 10px;
+  padding: 0.625rem;
   line-height: 2.0;
-  border: 1px solid var(--grey);
-  border-radius: 8px;
+  border: 0.063rem solid var(--grey);
+  border-radius: 0.5rem;
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .error-message {
@@ -144,25 +144,25 @@ input[type="email"]{
 }
 
 button {
-  border-radius: 8px;
-  padding: 10px 20px;
+  border-radius: 0.5rem;
+  padding: 0.625rem 1.25rem;
   border: none;
   background-color: var(--dark-blue);
   color: var(--white);
   font-weight: 700;
   width: 100%;
-  font-size: 16px;
+  font-size: 1rem;
   cursor: pointer;
 } 
 
 button:hover:not(:disabled) {
   background: linear-gradient(to right, #ff6a3a, #ff527b); 
-  box-shadow: 0 10px 20px rgba(255, 82, 123, 0.5);
+  box-shadow: 0 0.625rem 1.25rem rgba(255, 82, 123, 0.5);
 }
 
 
 /* Desktop Viewpoint */
- @media screen and (min-width: 900px) {
+ @media screen and (min-width: 56.25rem) {
   body {
     display: flex;
     align-items: center;
@@ -178,12 +178,12 @@ button:hover:not(:disabled) {
 
   .card {
     flex-direction: row-reverse;
-    padding:20px;
+    padding:1.25rem;
     height:auto;
     /* width: auto; */
-    max-width: 920px;
-    border-radius: 30px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    max-width: 57.5rem;
+    border-radius: 1.875rem;
+    box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.2);
   }
 
 
@@ -192,8 +192,8 @@ button:hover:not(:disabled) {
     background-image: url('/assets/images/illustration-sign-up-desktop.svg');
     background-size: cover;
     background-position: center;
-    min-height: 570px;
-    border-radius: 10px;
+    min-height: 35.625rem;
+    border-radius: 0.625rem;
   }
 
   .card-body {
@@ -201,12 +201,12 @@ button:hover:not(:disabled) {
   }
 
   button {
-    padding: 20px;
+    padding: 1.25rem;
   }
 
   button:hover:not(:disabled) {
 
   background: linear-gradient(to right, #ff6a3a, #ff527b); 
-  box-shadow: 0 10px 20px rgba(255, 82, 123, 0.5);
+  box-shadow: 0 0.625rem 1.25rem rgba(255, 82, 123, 0.5);
 }
  }
