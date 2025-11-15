@@ -47,7 +47,7 @@ body {
 
  .card-header {
  height: 17.5rem;
- background-image: url('/assets/images/illustration-sign-up-mobile.svg');
+ background-image: url('./assets/images/illustration-sign-up-mobile.svg');
  background-repeat: no-repeat;
  width: 100%;
  background-size: cover;
