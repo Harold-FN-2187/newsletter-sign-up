@@ -11,9 +11,9 @@
 
 @font-face {
   font-family: Roboto;
-  src: url("/fonts/Roboto-Regular.ttf");
+  src: url("fonts/Roboto-Regular.ttf");
   font-family: Roboto-Bold;
-  src: url("/fonts/Roboto-Bold.ttf");
+  src: url("fonts/Roboto-Bold.ttf");
 }
 
   * {
@@ -100,7 +100,7 @@ ul {
 ul > li {
   line-height: 1.5;
   font-size: 1.125rem;
-  background-image: url('/images/icon-success.svg');
+  background-image: url('images/icon-success.svg');
   background-repeat: no-repeat;
   background-size: 1rem 1rem;
   background-position: 0 0.313rem;
@@ -199,7 +199,7 @@ button:hover:not(:disabled) {
 
   .card-header {
     flex:1;
-    background-image: url('/images/illustration-sign-up-desktop.svg');
+    background-image: url('images/illustration-sign-up-desktop.svg');
     background-size: cover;
     background-position: center;
     min-height: 35.625rem;
