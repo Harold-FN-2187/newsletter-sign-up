@@ -70,7 +70,6 @@ body {
 } 
 
  .card-body h1 {
-  font-size: 2.5rem;
     color:var(--dark-blue);
     font-weight: 700;
     margin-top: 0;
